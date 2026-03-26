@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+
+    <mime-type type="application/x-emulator-disk-image">
+        <comment>Emulator disk image</comment>
+
+        <glob pattern="*.chd"/>
+        <glob pattern="*.cue"/>
+        <glob pattern="*.bin"/>
+        <glob pattern="*.iso"/>
+        <glob pattern="*.img"/>
+        <glob pattern="*.ccd"/>
+        <glob pattern="*.mds"/>
+        <glob pattern="*.nrg"/>
+        <glob pattern="*.cd"/>
+
+    </mime-type>
+
+</mime-info>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+MimeType=video/*
+Actions=ConvertToMP4
+
+[Desktop Action ConvertToMP4]
+Name=Convert to MP4
+Name[it]=Converti in MP4
+Icon=video-x-generic
+Exec=sh -c 'for f in "$@"; do case "${f,,}" in *.mp4) continue;; esac; ffmpeg -y -i "$f" -c copy "${f%.*}.mp4"; done' dummy %F
+Terminal=true

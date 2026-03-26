@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+MimeType=application/x-cue;
+Actions=bin2iso
+Icon=media-optical
+
+[Desktop Action bin2iso]
+Name=Convert BIN/CUE to ISO
+Name[it]=Converti BIN/CUE in ISO
+Icon=media-optical
+Exec=konsole -e bash -c 'cue="%f"; base="${cue%.cue}"; echo "CUE: $cue"; echo "BASE: $base"; bchunk "$base.bin" "$cue" "$base"; mv "${base}01.iso" "$base.iso"; echo "Done. Press enter to close."; read'

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+MimeType=application/x-iso9660-image;application/x-cd-image;application/x-raw-disk-image;
+Actions=mountiso
+Icon=media-optical
+
+[Desktop Action mountiso]
+Name=Mount ISO
+Name[it]=Monta immagine
+Icon=media-optical
+Exec=sh -c 'file="%f"; name=$(basename "$file"); name="${name%.*}"; mnt="/tmp/iso-$name"; mkdir -p "$mnt"; pkexec mount -o loop "$file" "$mnt"; dolphin "$mnt"'
